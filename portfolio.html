@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anas Amhaini — Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#101826; --muted:#9fb0c0; --text:#eaf2ff;
+      --accent:#f7941d; --line:#1c2a3a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(247,148,29,.18), transparent 60%),
+                  radial-gradient(900px 700px at 90% 10%, rgba(90,140,255,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px}
+    header{
+      display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      border:1px solid var(--line); background: rgba(16,24,38,.75);
+      padding:18px; border-radius:18px; backdrop-filter: blur(8px);
+    }
+    .left{display:flex; gap:14px; align-items:center}
+    .avatar{
+      width:56px; height:56px; border-radius:16px; background: linear-gradient(135deg, rgba(247,148,29,.9), rgba(247,148,29,.2));
+      display:grid; place-items:center; font-weight:800; letter-spacing:.5px;
+      border:1px solid rgba(247,148,29,.35);
+    }
+    .name{font-size:20px; font-weight:800}
+    .tag{color:var(--muted); font-size:13.5px; margin-top:4px; line-height:1.35}
+    nav{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:650; font-size:13.5px;
+    }
+    .btn.primary{border-color: rgba(247,148,29,.45); background: rgba(247,148,29,.12)}
+    .hero{margin-top:18px; padding:18px; border-radius:18px; border:1px solid var(--line); background: rgba(16,24,38,.55)}
+    h1{margin:0; font-size:26px}
+    .sub{margin-top:10px; color:var(--muted); line-height:1.6}
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:14px; margin-top:14px}
+    .card{
+      grid-column: span 12;
+      border:1px solid var(--line); background: rgba(16,24,38,.60);
+      border-radius:18px; padding:16px;
+    }
+    @media (min-width:820px){
+      .card.half{grid-column: span 6}
+      .card.third{grid-column: span 4}
+    }
+    .card h2{margin:0 0 8px; font-size:18px}
+    .meta{color:var(--muted); font-size:13.5px; line-height:1.5}
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .pill{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--line); color:var(--muted)}
+    .proj{display:flex; justify-content:space-between; align-items:flex-start; gap:12px}
+    .proj a.link{color: var(--accent); font-weight:750}
+    footer{margin-top:18px; color:var(--muted); font-size:12.5px; text-align:center}
+    .small{font-size:12.5px}
+    .divider{height:1px; background: var(--line); margin:12px 0}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="left">
+        <div class="avatar">AA</div>
+        <div>
+          <div class="name">Anas Amhaini</div>
+          <div class="tag">Business IT &amp; Management (BIM) • Focus: AI, digitalisering, data &amp; security-awareness</div>
+        </div>
+      </div>
+
+      <nav>
+        <!-- Zet hier later jouw echte links in -->
+        <a class="btn primary" href="#" id="githubLink">GitHub</a>
+        <a class="btn" href="#" id="linkedinLink">LinkedIn</a>
+        <a class="btn" href="mailto:anas-amh@hotmail.com">Mail</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="over-mij">
+      <h1>Van idee naar werkende applicatie — snel, netjes en veilig.</h1>
+      <p class="sub">
+        Ik bouw praktische oplossingen met AI en automatisering. Denk aan prototypes (vibecoding), low-code workflows (zoals n8n),
+        en de stap naar productie: structuur, security en onderhoudbaarheid. Mijn projecten laten zien dat ik niet alleen kan bouwen,
+        maar ook kritisch kan reviewen en verbeteren.
+      </p>
+      <div class="pillrow">
+        <span class="pill">AI basics (LLM, tokens, RAG, agents)</span>
+        <span class="pill">Low-code automatisering</span>
+        <span class="pill">Security &amp; kwaliteitscheck</span>
+        <span class="pill">Business ↔ IT vertaling</span>
+      </div>
+    </section>
+
+    <div class="grid" id="projecten">
+      <section class="card half">
+        <div class="proj">
+          <div>
+            <h2>Project 1 — RAG Mini: HR Helpdesk Bot</h2>
+            <div class="meta">
+              Mini-assistent die vragen beantwoordt op basis van aangeleverde documenten (minder hallucinaties).
+              Gebaseerd op chunking + embeddings + retrieval.
+            </div>
+            <div class="pillrow">
+              <span class="pill">RAG</span><span class="pill">LLM</span><span class="pill">Vector search</span>
+            </div>
+          </div>
+          <a class="link" href="#" id="p1">Repo →</a>
+        </div>
+        <div class="divider"></div>
+        <div class="small meta">Status: prototype • Volgende stap: productie-checklist (security, logging, tests).</div>
+      </section>
+
+      <section class="card half">
+        <div class="proj">
+          <div>
+            <h2>Project 2 — Low-code Automation: Lead Workflow</h2>
+            <div class="meta">
+              Workflow voor onboarding/leads: formulier → verrijking → tag in CRM → gepersonaliseerde mail → opvolg-taak.
+            </div>
+            <div class="pillrow">
+              <span class="pill">n8n</span><span class="pill">If/Else</span><span class="pill">Foutafhandeling</span>
+            </div>
+          </div>
+          <a class="link" href="#" id="p2">Repo →</a>
+        </div>
+        <div class="divider"></div>
+        <div class="small meta">Status: concept • Volgende stap: screenshots + korte uitleg per node.</div>
+      </section>
+
+      <section class="card third">
+        <h2>Project 3 — Security Review Case</h2>
+        <div class="meta">Voorbeeld: SQL-injection fix + input validatie + parameterized queries.</div>
+        <div class="pillrow">
+          <span class="pill">Security</span><span class="pill">Code review</span>
+        </div>
+        <div class="divider"></div>
+        <a class="link" href="#" id="p3">Repo →</a>
+      </section>
+
+      <section class="card third">
+        <h2>Skills</h2>
+        <div class="meta">
+          • Vertalen van business naar IT-oplossingen<br/>
+          • AI-geletterdheid: LLM/RAG/agents<br/>
+          • Basis web: HTML/CSS/JS, (React/Next als vervolg)<br/>
+          • Structuur: README, documentatie, portfolio
+        </div>
+      </section>
+
+      <section class="card third" id="contact">
+        <h2>Contact</h2>
+        <div class="meta">
+          Mail: <a href="mailto:anas-amh@hotmail.com" class="link">anas-amh@hotmail.com</a><br/>
+          LinkedIn: <a href="#" id="linkedinLink2" class="link">open profiel</a><br/>
+          GitHub: <a href="#" id="githubLink2" class="link">open repos</a>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Anas Amhaini • Portfolio (1-pagina) • Update je links zodra je repos live staan
+    </footer>
+  </div>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const links = {
+    github: "https://github.com/Anassam-cmd",
+    linkedin: "https://www.linkedin.com/in/anas-a-b704b31b7/",
+    p1: "https://github.com/Anassam-cmd/rag-hr-helpdesk",
+    p2: "https://github.com/Anassam-cmd/lead-automation-n8n",
+    p3: "https://github.com/Anassam-cmd/security-review-sql-injection"
+  };
+
+  const set = (id, url) => {
+    const el = document.getElementById(id);
+    if (el) el.href = url;
+  };
+
+  set("githubLink", links.github);
+  set("githubLink2", links.github);
+  set("linkedinLink", links.linkedin);
+  set("linkedinLink2", links.linkedin);
+  set("p1", links.p1);
+  set("p2", links.p2);
+  set("p3", links.p3);
+</script>
+</body>
+</html>
